@@ -1,0 +1,52 @@
+# .NET build and output directories
+/bin/
+/obj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userprefs
+*.vscode
+*.vsix
+*.sln.docstates
+*.suo
+*.user
+
+# Resharper files
+_ReSharper*/
+*.resharper
+*.sln.DotSettings.user
+
+# NuGet packages directory
+/packages/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.exe.config
+
+# Logs and other generated files
+*.log
+*.log.*
+*.vsix.*
+*.VisualState.xml
+
+# MSTest Test Results
+TestResults/
+
+# Visual Studio cache files
+.vscode/*
+.vs/*/
+
+# Miscellaneous
+thumbs.db
+*.DS_Store
+*.sln.ide
+*.dotsettings.user
+*.ipch/
+*.suo
