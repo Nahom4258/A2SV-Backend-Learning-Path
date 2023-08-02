@@ -1,5 +1,5 @@
 public class Shape {
-    private string Name;
+    private string Name {get; set;}
 
     public Shape(string name) {
         Name = name;
