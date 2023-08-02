@@ -1,6 +1,9 @@
 # .NET build and output directories
-/bin/
-/obj/
+bin/
+obj/
+
+# Rider files
+.idea/
 
 # Visual Studio files
 .vs/
