@@ -1,4 +1,4 @@
-class Shape {
+public class Shape {
     private string Name;
 
     public Shape(string name) {
@@ -13,5 +13,6 @@ class Shape {
     public virtual void PrintShapeArea() {
         System.Console.WriteLine($"Name: {Name}");
         System.Console.WriteLine($"Area: {this.CalculateArea()}");
+        System.Console.WriteLine();
     }
 }

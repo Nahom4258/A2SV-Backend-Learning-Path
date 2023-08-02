@@ -1,8 +1,8 @@
-class Circle : Shape
+public class Circle : Shape
 {
     private double Radius { get; set; }
 
-    private Circle(string name, double radius) 
+    public Circle(string name, double radius) 
     : base(name) {
         Radius = radius;
     }

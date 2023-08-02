@@ -1,4 +1,4 @@
-class Triangle : Shape {
+public class Triangle : Shape {
     private double Base {get; set;}
     private double Height {get; set;}
 

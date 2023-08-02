@@ -1,4 +1,4 @@
-class Rectangle : Shape
+public class Rectangle : Shape
 {
     private double Width {get; set;}
     private double Height {get; set;}
@@ -8,6 +8,12 @@ class Rectangle : Shape
     {
         Width = width;
         Height = height;
+    }
+
+    public Rectangle(string name, double sideLength)
+    : base(name) {
+        Width = sideLength;
+        Height = sideLength;
     }
 
     public override double CalculateArea()
