@@ -1,6 +1,6 @@
-class Task3PalindromeCheck
+class Task3
 {
-    public void Task3PalindromeCheck()
+    public void PalindromeCheck()
     {
         System.Console.Write("Enter a string: ");
         string input = Console.ReadLine();
