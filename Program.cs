@@ -1,24 +1,13 @@
-﻿// Day 2 - Task 1 execution
-Circle circle = new Circle("Circle", 35);
-Rectangle rectangle = new Rectangle("Rectangle", 4, 7);
-Rectangle square = new Rectangle("Sqare", 5);
-Triangle triangle = new Triangle("Triangle", 8, 2);
+﻿StudentList<Student> studentList = new StudentList<Student>();
 
-circle.PrintShapeArea();
-rectangle.PrintShapeArea();
-square.PrintShapeArea();
-triangle.PrintShapeArea();
+studentList.Add(new Student("Nahom", 23, 1, 10));
+studentList.Add(new Student("Nahom2", 234, 17, 10));
+studentList.Add(new Student("Nahom3", 23543, 14, 10));
 
-// Day 2 - Task 2 execution
-Library abrehot = new Library("Abrehot", "4 Kilo");
-// add books
-abrehot.AddBook(new Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", 1925));
-abrehot.AddBook(new Book("To Kill a Mockingbird", "Harper Lee", "9780061120084", 1960));
-abrehot.AddBook(new Book("1984", "George Orwell", "9780451524935", 1949));
+System.Console.WriteLine($"Search by Name: ");
+studentList.SearchByName("Nahom").DisplayInfo();
 
-// add media items
-abrehot.AddMediaItem(new MediaItem("Inception", "DVD", 154));
-abrehot.AddMediaItem(new MediaItem("Thriller", "CD", 42));
-abrehot.AddMediaItem(new MediaItem("Planet Earth II", "DVD", 300));
+System.Console.WriteLine($"Search by ID: ");
+studentList.SearchById(17).DisplayInfo();
 
-abrehot.PrintCatalog();
+studentList.SaveToJsonFile();
