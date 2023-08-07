@@ -8,15 +8,21 @@ public interface IHasRollNo
 }
 
 
-public class StudentList<T> where T : IHasRollNo
+public class StudentList<T> where T : Student
 {
     private List<T> Students = new List<T>();
     private string filePath = "students.json";
+
+    public StudentList()
+    {
+        LoadFromJsonFile();
+    }
 
     public void Add(T student)
     {
         Students.Add(student);
         System.Console.WriteLine("Student added!!");
+        SaveToJsonFile();
     }
 
     public T SearchById(int id)
@@ -50,5 +56,16 @@ public class StudentList<T> where T : IHasRollNo
     {
         string jsonData = JsonSerializer.Serialize(Students);
         File.WriteAllText(filePath, jsonData);
+    }
+
+    public void DisplayAll()
+    {
+        foreach (var student in Students)
+        {
+            System.Console.WriteLine("===============================");
+            System.Console.WriteLine("Display All");
+            System.Console.WriteLine("===============================");
+            student.DisplayInfo();
+        }
     }
 }
